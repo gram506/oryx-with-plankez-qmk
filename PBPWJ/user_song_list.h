@@ -159,11 +159,11 @@
     E__NOTE(_A5 ),        \
     E__NOTE(_A6 ),
 
-#define AUDIO_OFF_SOUND \
+#define AUDIO_OFF_SOUND_2 \
     E__NOTE(_A6 ),        \
     E__NOTE(_A5 ),
 
-#define MUSIC_SCALE_SOUND MUSIC_ON_SOUND_2
+#define MUSIC_SCALE_SOUND_2 MUSIC_ON_SOUND_2
 
 #define MUSIC_OFF_SOUND_2 \
     E__NOTE(_A6 ),        \
