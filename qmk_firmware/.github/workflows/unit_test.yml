@@ -5,8 +5,8 @@ permissions:
 
 on:
   push:
-    paths-ignore:
-      - '**.md'
+    branches:
+    - firmware[0-9]+
   pull_request:
     paths:
     - 'builddefs/**'
@@ -31,4 +31,4 @@ jobs:
     - name: Install dependencies
       run: pip3 install -r requirements-dev.txt
     - name: Run tests
-      run: make test:all
+      run: qmk test-c

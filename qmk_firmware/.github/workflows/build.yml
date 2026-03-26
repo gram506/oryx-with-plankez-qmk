@@ -16,15 +16,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        keyboard:
-          - ergodox_ez
-          - ergodox_ez/shine
-          - ergodox_ez/glow
-          - moonlander
-          - planck/ez
-          - planck/ez/glow
-          - voyager
-          - voyager/gd32
         keymap:
           - default
           - oryx
@@ -40,4 +31,4 @@ jobs:
     - name: Build
       id: build
       run: |
-        qmk compile -kb ${{ matrix.keyboard}} -km ${{ matrix.keymap }}
+        qmk mass-compile -f manufacturer="ZSA Technology Labs" -km ${{ matrix.keymap }} -e SKIP_GIT=1

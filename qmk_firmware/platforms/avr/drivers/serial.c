@@ -53,13 +53,8 @@
 #        define EICRx EICRA
 #    endif
 
-<<<<<<< HEAD
-// ATmegaxxU2 specific config
-#    if defined(__AVR_ATmega16U2__) || defined(__AVR_ATmega32U2__)
-=======
 // ATmegaxxU2/AT90USB162 specific config
 #    if defined(__AVR_ATmega16U2__) || defined(__AVR_ATmega32U2__) || defined(__AVR_AT90USB162__)
->>>>>>> 0.12.52~1
 // PD4(INT5), PD6(INT6), PD7(INT7), PC7(INT4)
 #        if SOFT_SERIAL_PIN == D4
 #            define EIMSK_BIT _BV(INT5)
@@ -244,28 +239,28 @@ inline static void serial_delay_half2(void) {
 
 inline static void serial_output(void) ALWAYS_INLINE;
 inline static void serial_output(void) {
-    setPinOutput(SOFT_SERIAL_PIN);
+    gpio_set_pin_output(SOFT_SERIAL_PIN);
 }
 
 // make the serial pin an input with pull-up resistor
 inline static void serial_input_with_pullup(void) ALWAYS_INLINE;
 inline static void serial_input_with_pullup(void) {
-    setPinInputHigh(SOFT_SERIAL_PIN);
+    gpio_set_pin_input_high(SOFT_SERIAL_PIN);
 }
 
 inline static uint8_t serial_read_pin(void) ALWAYS_INLINE;
 inline static uint8_t serial_read_pin(void) {
-    return !!readPin(SOFT_SERIAL_PIN);
+    return !!gpio_read_pin(SOFT_SERIAL_PIN);
 }
 
 inline static void serial_low(void) ALWAYS_INLINE;
 inline static void serial_low(void) {
-    writePinLow(SOFT_SERIAL_PIN);
+    gpio_write_pin_low(SOFT_SERIAL_PIN);
 }
 
 inline static void serial_high(void) ALWAYS_INLINE;
 inline static void serial_high(void) {
-    writePinHigh(SOFT_SERIAL_PIN);
+    gpio_write_pin_high(SOFT_SERIAL_PIN);
 }
 
 void soft_serial_initiator_init(void) {
