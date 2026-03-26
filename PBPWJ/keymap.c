@@ -489,10 +489,10 @@ uint16_t layer_state_set_user(uint16_t state) {
 
 // Custom QMK here
 const key_override_t **key_overrides = (const key_override_t *[]){
-	&ko_make_with_layers(MOD_MASK_SHIFT, JP_SCLN, JP_COLN),
-    &ko_make_with_layers(MOD_MASK_SHIFT, JP_QUOT, JP_DQT),
-    &ko_make_with_layers(MOD_MASK_SHIFT, JP_COMM, JP_LT),
-    &ko_make_with_layers(MOD_MASK_SHIFT, JP_DOT, JP_GT),
-    &ko_make_with_layers(MOD_MASK_SHIFT, JP_SLSH, JP_QUES),
+	&ko_make_with_layers(MOD_MASK_SHIFT, JP_SCLN, JP_COLN, 6),
+    &ko_make_with_layers(MOD_MASK_SHIFT, JP_QUOT, JP_DQT, 6),
+    &ko_make_with_layers(MOD_MASK_SHIFT, JP_COMM, JP_LT, 6),
+    &ko_make_with_layers(MOD_MASK_SHIFT, JP_DOT, JP_GT, 6),
+    &ko_make_with_layers(MOD_MASK_SHIFT, JP_SLSH, JP_QUES, 6),
 	NULL
 };
