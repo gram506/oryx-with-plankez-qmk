@@ -488,9 +488,9 @@ uint16_t layer_state_set_user(uint16_t state) {
 }
 
 // ; -> :
-const key_override_t scln_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_SCLN, JP_COLN);
+const key_override_t scln_key_override = ko_make_with_layers(MOD_MASK_SHIFT, JP_SCLN, JP_COLN, 5);
 // ' -> "
-const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, JP_QUOT, JP_DQT);
+const key_override_t quot_key_override = ko_make_with_layers(MOD_MASK_SHIFT, JP_QUOT, JP_DQT, 5);
 
 // Custom QMK here
 const key_override_t *key_overrides[] = {
