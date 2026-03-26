@@ -492,5 +492,5 @@ const key_override_t *key_overrides[] = {
     // ; -> :
 	&ko_make_with_layers(MOD_MASK_SHIFT, JP_SCLN, JP_COLN, 5),
     // ' -> "
-    &ko_make_with_layers(MOD_MASK_SHIFT, JP_QUOT, JP_DQUO, 5)
+    &ko_make_with_layers(MOD_MASK_SHIFT, JP_QUOT, JP_DQT, 5)
 };
