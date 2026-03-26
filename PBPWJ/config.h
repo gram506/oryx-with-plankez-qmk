@@ -1,7 +1,7 @@
 #pragma once
 
 #ifdef AUDIO_ENABLE
-#define STARTUP_SONG SONG(ZELDA_PUZZLE)
+#define STARTUP_SONG SONG(ZELDA_PUZZLE_2)
 #endif
 
 #define MIDI_BASIC
