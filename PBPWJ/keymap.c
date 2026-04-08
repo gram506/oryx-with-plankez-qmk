@@ -8,6 +8,8 @@
 #define ZSA_SAFE_RANGE SAFE_RANGE
 #endif
 
+float my_song[][2] = SONG(ZELDA_TREASURE_2);
+
 enum custom_keycodes {
   RGB_SLD = ZSA_SAFE_RANGE,
   ST_MACRO_0,
@@ -56,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_RAISE] = LAYOUT_planck_grid(
-    KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_TRANSPARENT, 
+    KC_GRAVE,       KC_1,           PLAY_SONG(my_song),           KC_3,           KC_4,           KC_5,           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_TRANSPARENT, 
     KC_DELETE,      KC_PSCR,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MINUS,       KC_EQUAL,       KC_LBRC,        KC_RBRC,        KC_BSLS,        
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NONUS_HASH,  KC_NUBS,        KC_PAGE_UP,     KC_PGDN,        KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_TRANSPARENT, TD(DANCE_2),    KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,TD(DANCE_3)
