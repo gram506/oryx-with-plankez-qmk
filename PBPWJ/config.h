@@ -3,7 +3,7 @@
 #ifdef AUDIO_ENABLE
 #define STARTUP_SONG SONG(FF_PRELUDE_2)
 #define AUDIO_INIT_DELAY
-#define AUDIO_VOICES
+#define AUDIO_CLICKY
 #endif
 
 #define MIDI_BASIC
