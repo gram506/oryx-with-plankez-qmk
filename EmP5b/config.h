@@ -1,7 +1,9 @@
 #pragma once
 
 #ifdef AUDIO_ENABLE
-#define STARTUP_SONG SONG(PLANCK_SOUND)
+#define STARTUP_SONG SONG(FF_PRELUDE_2)
+#define AUDIO_INIT_DELAY
+#define AUDIO_CLICKY
 #endif
 
 #define MIDI_BASIC

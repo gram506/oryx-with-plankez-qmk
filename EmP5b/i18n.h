@@ -3,6 +3,11 @@
 #define JP_COMM KC_COMM
 #define JP_DOT KC_DOT
 #define JP_SLSH KC_SLSH
+#define JP_COLN KC_QUOT
+#define JP_DQT S(KC_2)
+#define JP_LT S(KC_COMM)
+#define JP_GT S(KC_DOT)
+#define JP_QUES S(KC_SLSH)
 #define JP_CIRC KC_EQL
 #define JP_EXLM S(KC_1)
 #define JP_AT KC_LBRC

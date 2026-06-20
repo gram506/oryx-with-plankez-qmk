@@ -474,3 +474,13 @@ uint16_t layer_state_set_user(uint16_t state) {
     return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
 }
 
+// Custom QMK here
+// ; -> :
+const key_override_t scln_key_override = ko_make_with_layers(MOD_MASK_SHIFT, JP_SCLN, JP_COLN, 1<<5);
+// ' -> "
+const key_override_t quot_key_override = ko_make_with_layers(MOD_MASK_SHIFT, JP_QUOT, JP_DQT, 1<<5);
+
+const key_override_t *key_overrides[] = {
+    &scln_key_override,
+    &quot_key_override
+};
